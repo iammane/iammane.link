@@ -100,9 +100,14 @@ function runTheIDM(userWord) {
     var iterList = [1, 2, 3];
     var titleArr = [];
     titleArr.push(userWord);
-    
-
-
+    var randIter = Math.floor(Math.random() * 3);
+    for (let iter = 0; iter < randIter; iter++) {
+        randTitleNum = Math.floor(Math.random() * MASTERDATA.length);
+        randTitle = MASTERDATA[randTitleNum];
+        titleArr.push(randTitle.slice(1,2));
+    }
+    var finishedTitle = titleArr.join('');
+    console.log(finishedTitle);
 }
 
 
