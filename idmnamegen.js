@@ -97,14 +97,26 @@ function runTheIDM(userWord) {
         "krYlon", "nofour", "os veix3", "paralel Suns", "plyPhon", "pt2ph8", "qplay",
         "r ess", "rale", "redfall", "see on see", "st epreo"
     ]
+    
+    // Need to loop five times
+    var multiArr = [];
     var titleArr = [];
-    titleArr.push(document.getElementById('idmword').value);
-    var randIter = Math.floor((Math.random() * 10) + 1);
-    for (let iter = 0; iter < randIter; iter++) {
-        randTitleNum = Math.floor(Math.random() * MASTERDATA.length);
-        randTitle = MASTERDATA[randTitleNum];
-        titleArr.push(randTitle.slice(1,2));
+    for (let reps = 0; reps < 5; reps++) {
+        titleArr = [];
+        titleArr.push(document.getElementById('idmword').value);
+        var randIter = Math.floor((Math.random() * 10) + 1);
+        for (let iter = 0; iter < randIter; iter++) {
+            randTitleNum = Math.floor(Math.random() * MASTERDATA.length);
+            randTitle = MASTERDATA[randTitleNum];
+            titleArr.push(randTitle.slice(1,2));
+        }
+        var finishedTitle = titleArr.join('');
+        multiArr.push(finishedTitle);
     }
-    var finishedTitle = titleArr.join('');
-    document.getElementById('idmoutput').innerHTML = "<p style='text-align: center;'>Your semi random likely incomprehensible IDM name is: " + finishedTitle + "</p>";
+    document.getElementById('idmoutput').innerHTML = "<p style='text-align: center;'>Your semi random, (very) likely incomprehensible IDM names are:</p> \
+         <p style='text-align: center;'>" + multiArr[0] + "</p> \
+         <p style='text-align: center;'>" + multiArr[1] + "</p> \
+         <p style='text-align: center;'>" + multiArr[2] + "</p> \
+         <p style='text-align: center;'>" + multiArr[3] + "</p> \
+         <p style='text-align: center;'>" + multiArr[4] + "</p>";
 }
