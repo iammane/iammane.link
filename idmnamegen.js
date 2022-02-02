@@ -97,38 +97,14 @@ function runTheIDM(userWord) {
         "krYlon", "nofour", "os veix3", "paralel Suns", "plyPhon", "pt2ph8", "qplay",
         "r ess", "rale", "redfall", "see on see", "st epreo"
     ]
-    var iterList = [1, 2, 3];
     var titleArr = [];
-    titleArr.push(userWord);
-    var randIter = Math.floor(Math.random() * 3);
+    titleArr.push(document.getElementById('idmword').value);
+    var randIter = Math.floor((Math.random() * 10) + 1);
     for (let iter = 0; iter < randIter; iter++) {
         randTitleNum = Math.floor(Math.random() * MASTERDATA.length);
         randTitle = MASTERDATA[randTitleNum];
         titleArr.push(randTitle.slice(1,2));
     }
     var finishedTitle = titleArr.join('');
-    console.log(finishedTitle);
+    document.getElementById('idmoutput').innerHTML = "<p style='text-align: center;'>Your semi random likely incomprehensible IDM name is: " + finishedTitle + "</p>";
 }
-
-
-
-// Below is the Python version of the function, it must be JS'ified above.
-//
-// def runTheIDM(t, newarr, counter):
-// c = 0
-// iterlist = [1, 2, 3]
-// titlearr = []
-// titlearr.append(t)
-// while c < counter:
-//     # Loop either 1, 2 or 3 times - this keeps resulting phrase short
-//     for _ in range(0, random.choice(iterlist)):
-//         # Select a random song title from the list
-//         randtit = random.choice(newarr)
-//         # Append the song title to new title, index 1
-//         # through 100, skipping every other char
-//         titlearr.append(randtit[1:100:2])
-//     titlefin = ''.join(titlearr)  # Munge it all together
-//     print(titlefin)  # Print it
-//     titlearr = [t]  # Reset to originally entered word
-//     titlefin = ''  # Clear the title
-//     c += 1  # Increase the counter
