@@ -1,4 +1,29 @@
+.cursiveBig {
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 60px;
+}
+
+.cursiveMassive {
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 80px;
+}
+
+.cursiveSmall {
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 40px;
+}
+
 .footP {
     font-size: smaller;
     margin: 0px;
+}
+
+.heroInit {
+    background-color: #ffffff;
+    background-image:url('./fieldbgdark.jpg');
+    background-size: cover;
+}
+
+.manMod {
+    width: 300px;
 }
