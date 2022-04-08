@@ -1,3 +1,9 @@
+hr {
+    border-top: 2px dotted gray;
+    margin: 20px;
+    /* width: 50%; */
+}
+
 .cursivebig {
     font-family: 'Qwitcher Grypen', cursive;
     font-size: 60px;
@@ -27,6 +33,22 @@
     background-color: #ffffff;
     background-image:url('./fieldbgdark.jpg');
     background-size: cover;
+}
+
+.idmcontainer {
+    background-color: #ffffff;
+    background-image:url('./glitchscreen.jpg');
+    background-size: cover;
+}
+
+.amenseqcontainer {
+    background-color: #000000;
+    background-image: url('./cdj.jpg');
+    background-size: cover;
+}
+
+.idmfont {
+    font-family: 'Press Start 2P', cursive;
 }
 
 .manmod {
