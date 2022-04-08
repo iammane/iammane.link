@@ -1,7 +1,33 @@
 hr {
     border-top: 2px dotted gray;
     margin: 20px;
-    /* width: 50%; */
+}
+
+/* For debugging */
+.bordred {
+    border-color: red; border-style: solid; border-width: 2px;
+}
+
+.bordteal {
+    border-color: teal; border-style: solid; border-width: 2px;
+}
+
+.bordyellow {
+    border-color: yellow; border-style: solid; border-width: 2px;
+}
+
+.bordgreen {
+    border-color: greenyellow; border-style: solid; border-width: 2px;
+}
+
+.bordorange {
+    border-color: orange; border-style: solid; border-width: 2px;
+}
+/* End debugging styles */ 
+
+.amenfont {
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 60px;
 }
 
 .cursivebig {
@@ -54,3 +80,8 @@ hr {
 .manmod {
     width: 300px;
 }
+
+/*
+font-family: 'Libre Barcode 39 Text', cursive;
+font-family: 'Palette Mosaic', cursive;
+*/
