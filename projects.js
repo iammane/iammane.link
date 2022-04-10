@@ -145,13 +145,13 @@ async function amenSeqRun() {
     }
 }
 
-document.getElementById('amenbutton').addEventListener('mousedown', function() {
+document.getElementById('amenbutton').addEventListener('pointerdown', function() {
     if (document.getElementById('amenseqstr').value != '') {
         amenplay = true;
         amenSeqRun();
     }
 });
 
-document.getElementById('amenbutton').addEventListener('mouseup', function() {
+document.getElementById('amenbutton').addEventListener('pointerup', function() {
     amenplay = false;
 });
