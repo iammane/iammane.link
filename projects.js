@@ -145,6 +145,47 @@ async function amenSeqRun() {
     }
 }
 
+function squirrelSpin() {
+    var sqSpinOut = Math.floor((Math.random() * 10) +  1);
+    if (sqSpinOut == 1) {
+        document.querySelector('.squirrout').style.background = "yellow";
+        document.querySelector('.squirrout').innerHTML = "Yellow!";
+    }
+    if (sqSpinOut == 2) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Wind! Lose all acorns!";
+    }if (sqSpinOut == 3) {
+        document.querySelector('.squirrout').style.background = "purple";
+        document.querySelector('.squirrout').innerHTML = "Purple!";
+    }if (sqSpinOut == 4) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Lose one acorn!";
+    }if (sqSpinOut == 5) {
+        document.querySelector('.squirrout').style.background = "red";
+        document.querySelector('.squirrout').innerHTML = "Red!";
+    }
+    if (sqSpinOut == 6) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Pick one acorn!";
+    }
+    if (sqSpinOut == 7) {
+        document.querySelector('.squirrout').style.background = "blue";
+        document.querySelector('.squirrout').innerHTML = "Blue!";
+    }
+    if (sqSpinOut == 8) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Steal one acorn!";
+    }
+    if (sqSpinOut == 9) {
+        document.querySelector('.squirrout').style.background = "green";
+        document.querySelector('.squirrout').innerHTML = "Green!";
+    }
+    if (sqSpinOut == 10) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Pick two acorns!";
+    }
+}
+
 document.getElementById('amenbutton').addEventListener('pointerdown', function() {
     if (document.getElementById('amenseqstr').value != '') {
         amenplay = true;
@@ -155,3 +196,5 @@ document.getElementById('amenbutton').addEventListener('pointerdown', function()
 document.getElementById('amenbutton').addEventListener('pointerup', function() {
     amenplay = false;
 });
+
+document.getElementById('squirrelbutton').addEventListener('click', squirrelSpin);

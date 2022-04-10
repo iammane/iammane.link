@@ -84,3 +84,8 @@ hr {
 .pressed {
     opacity: .5;
 }
+
+.squirrout {
+    height: 100px;
+    width: 300px;
+}
