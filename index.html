@@ -12,6 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+
+  <link href="./cust.css" rel="stylesheet">
 
   <title>iammane.link</title>
 </head>
@@ -51,84 +54,70 @@
     </div>
   </nav>
 
-  <div class="container-fluid"
-    style="background-image:url('./fieldbgdark.jpg'); background-color: #ffffff; background-size: cover;">
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <p class="text-white"
-            style="text-align: center; padding-top: 50px; padding-bottom: 25px; font-family: 'Qwitcher Grypen', cursive; font-size: 80px;">
-            Hello!</p>
-        </div>
+  <div class="container-fluid heroinit">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <p class="text-white text-center cursivemassive">
+          Hello!
+        </p>
       </div>
-      <div class="row justify-content-center">
-        <img src="./manmod.png" class="img-fluid" style="width: 300px; padding-bottom: 50px;">
-      </div>
-      <div class="row justify-content-center">
-        <h3 class="text-white" style="text-align: center; font-family: 'Qwitcher Grypen', cursive; font-size: 60px;">
-          ...and welcome to...</h3>
-        <p class="text-white" style="text-align: center;">...my spot for placing projects, ideas and random pieces of
-          computing tomfoolery.</p>
-      </div>
+    </div>
+    <div class="row justify-content-center">
+      <img src="./manmod.png" class="img-fluid manmod"> 
+    </div>
+    <div class="row justify-content-center">
+      <h3 class="text-white text-center cursivebig">
+        ...and welcome to...
+      </h3>
+      <p class="text-white text-center">...my spot for placing projects, ideas and random pieces of
+        computing tomfoolery.
+      </p>
     </div>
   </div>
 
-  <div class="container-fluid" id="about">
-    <!-- <div class="row justify-content-center"> -->
-      <!-- Start carousel -->
-      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./tech.jpg" class="d-block w-100" alt="Tech picture">
-            <div class="carousel-caption"> <!-- d-none d-md-block -->
-              <!-- <h5>About Me</h5> -->
-              <p style="background-color: black;">Technologist, hardware and software enthusiast since 1990.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./synths.jpg" class="d-block w-100" alt="Synth picture">
-            <div class="carousel-caption">
-              <!-- <h5>About Me</h5> -->
-              <p style="background-color: black;"">Bedroom producer & synth nerd &copy; 1999, Husband &copy; 2010, Dad &copy; 2012 (Dad*2 &copy; 2016).</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./htmlcss.jpg" class="d-block w-100" alt="HTML/CSS picture">
-            <div class="carousel-caption">
-              <!-- <h5>About Me</h5> -->
-              <p style="background-color: black;">Secret HTML and CSS lover from way back when.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./python.jpg" class="d-block w-100" alt="Scary big snake picture">
-            <div class="carousel-caption">
-              <!-- <h5>About Me</h5> -->
-              <p style="background-color: black;"><span style="text-decoration: strike;"Ninja</span> Pythonista in training.</p>
-            </div>
+  <div class="container-fluid bg-dark" id="about">
+    <!-- Start carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./tech.jpg" class="d-block w-100" alt="Tech picture">
+          <div class="carousel-caption">
+            <p class="bg-dark">Technologist, hardware and software enthusiast since 1990.</p>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item">
+          <img src="./synths.jpg" class="d-block w-100" alt="Synth picture">
+          <div class="carousel-caption">
+            <p class="bg-dark">Bedroom producer & synth nerd &copy; 1999, Husband &copy; 2010, Dad &copy; 2012 (Dad*2 &copy; 2016).</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./htmlcss.jpg" class="d-block w-100" alt="HTML/CSS picture">
+          <div class="carousel-caption">
+            <p class="bg-dark">Secret HTML and CSS lover from way back when.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
   
-
-  <div class="container-fluid" style="background-image:url('./glitchscreen.jpg'); background-color: #ffffff; background-size: cover;">
+  <!-- Begin IDM name generator section -->
+  <div class="container-fluid idmcontainer">
     <div class="row justify-content-center" id="projects">
-      <p class="text-white" style="text-align: center; padding-top: 10px;"><span style="background-color: black; font-family: 'Press Start 2P', cursive;">IDM Name Generator</span></p>
-
+      <p class="text-white text-center"><span class="bg-dark idmfont">IDM Name Generator</span></p>
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="input-group mb-3">
@@ -140,59 +129,108 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-md-6" id="idmoutput" style="background-color: white;">
-        <p style="text-align: center;">Awaiting input!</p>
+      <div class="col-md-6 bg-light" id="idmoutput">
+        <p class="text-center">Awaiting input!</p>
       </div>
     </div>
   </div>
-
-  <div class="container">
+  <!-- End IDM name generator section-->
+  <!-- Begin AmenSEQ project -->
+  <div class="container-fluid amenseqcontainer">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-xl-3">
+        <p class="text-center text-light amenfont">AmenSEQ</p>
+      </div>
+      <div class="col-xl-3">
+        <p class="text-light text-center bg-dark bg-opacity-75">I am incredibly addicted to the Amen Break. If you don't know what that is, take a look at this! ->
+          <a class="link-light" href="https://youtu.be/5SaFTm2bcac">History of the Amen Break</a></p>
+        <p class="text-light text-center bg-dark bg-opacity-75">This drum break (among others) is a staple of <em>Drum & Bass + Jungle</em>, two of my favorite genres.</p>
+        <p class="text-light text-center bg-dark bg-opacity-75">Enjoy slicing up your own. Each slice is assigned to a letter (a-s).
+          Sequence the slices and hold the <span class="text-info">AMEN, BROTHER!</span> button!</p>
+      </div>
+    </div>
     <div class="row justify-content-center">
-      <hr style="border-top: 2px dotted gray; width: 50%; margin: auto; margin-top: 20px; margin-bottom: 20px;">
-      <p style="text-align: center;">iammane.link is hosted on AWS. Route 53, an S3 bucket in us-east-1 configured for
-        static web hosting and CloudFront distribution for North America and Europe are in the mix. GitHub actions
-        pushes changes and updates to the site from the main repo after pull request from development.</p>
-      <p style="text-align: center;">But for now.... <span
-          style="font-family: 'Qwitcher Grypen', cursive; font-size: 40px;">that is all!</span></p>
+      <div class="col-md-12 text-center">
+        <img class="amen-a" src="./amen/a.jpg">
+        <img class="amen-b" src="./amen/b.jpg">
+        <img class="amen-c" src="./amen/c.jpg">
+        <img class="amen-d" src="./amen/d.jpg">
+        <img class="amen-e" src="./amen/e.jpg">
+        <img class="amen-f" src="./amen/f.jpg">
+        <img class="amen-g" src="./amen/g.jpg">
+        <img class="amen-h" src="./amen/h.jpg">
+        <img class="amen-i" src="./amen/i.jpg">
+        <img class="amen-j" src="./amen/j.jpg">
+        <img class="amen-k" src="./amen/k.jpg">
+        <img class="amen-l" src="./amen/l.jpg">
+        <img class="amen-m" src="./amen/m.jpg">
+        <img class="amen-n" src="./amen/n.jpg">
+        <img class="amen-o" src="./amen/o.jpg">
+        <img class="amen-p" src="./amen/p.jpg">
+        <img class="amen-q" src="./amen/q.jpg">
+        <img class="amen-r" src="./amen/r.jpg">
+        <img class="amen-s" src="./amen/s.jpg">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">String a thru s</span>
+          <input type="text" class="form-control" id="amenseqstr" value="a c b a b cdefghijlkmnopqrs" aria-label="abcdefghijklmnopqrs" aria-describedby="basic-addon1">
+          <button type="button" class="btn btn-info" id="amenbutton">AMEN, BROTHER!</button>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
+  <!-- End AmenSEQ project -->
 
+  <!-- Begin section site info -->
+  <div class="container">
+    <hr class="align-center">
+    <div class="row justify-content-center">
+      <p class="text-center">iammane.link is hosted on AWS. Route 53, an S3 bucket in us-east-1 configured for
+        static web hosting and CloudFront distribution for North America and Europe are in the mix. GitHub actions
+        pushes changes and updates to the site from the main repo after pull request from development.</p>
+      <p class="text-center">But for now.... <span class="cursivesmall">that is all!</span></p>
+    </div>
+  </div>
+  <!-- End section site info -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <script src="./idmnamegen.js"></script>
+  <script src="./projects.js"></script>
   
   <footer class="bg-light text-center text-lg-start">
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      <p>© 2022 Copyright: Matt Nemeth</p>
-      <p>Field photo by <a class="link-light"
+    <div class="text-center p-3 bg-secondary bg-opacity-50">
+      <p class="footp">© 2022 Copyright: Matt Nemeth</p>
+      <p class="footp">Field photo by <a class="link-light"
           href="https://unsplash.com/@gebhartyler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">gebhartyler</a>
         on <a class="link-light"
           href="https://unsplash.com/@gebhartyler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </p>
-      <p>Glitch screen photo by <a class="link-light" 
+      <p class="footp">Glitch screen photo by <a class="link-light" 
           href="https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sigmund</a>
         on <a class="link-light" 
           href="https://unsplash.com/s/photos/glitch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </p>
-      <p>Computer photo by <a class="link-light" 
+      <p class="footp">Computer photo by <a class="link-light" 
           href="https://unsplash.com/@lorenzoherrera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lorenzo Herrera</a>
         on <a class="link-light"
           href="https://unsplash.com/s/photos/computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-      <p>Synthesizer photo by <a class="link-light"
+      <p class="footp">Synthesizer photo by <a class="link-light"
           href="https://unsplash.com/@falcos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Panagiotis Falcos</a>
         on <a class="link-light"
           href="https://unsplash.com/s/photos/synthesizer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-      <p>HTML/CSS photo by <a class="link-light"
+      <p class="footp">HTML/CSS photo by <a class="link-light"
           href="https://unsplash.com/@valerysysoev?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Valery Sysoev</a>
         on <a class="link-light"
           href="https://unsplash.com/s/photos/html?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-      <p>Python photo by <a class="link-light"
-          href="https://unsplash.com/@thenightstxlker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tamara Gore</a>
+      <p class="footp">CDJ photo by <a class="link-light"
+          href="https://unsplash.com/@samvbussel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sam van Bussel</a>
         on <a class="link-light"
-          href="https://unsplash.com/s/photos/python?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-      <p><a class="link-light" href="https://www.flaticon.com/free-icons/person" title="Person Icons">Person icon
+          href="https://unsplash.com/s/photos/cdj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+      <p class="footp"><a class="link-light" href="https://www.flaticon.com/free-icons/person" title="Person Icons">Person icon
           created by Freepik - Flaticon</a></p>
     </div>
   </footer>

@@ -1,4 +1,10 @@
-function runTheIDM(userWord) {
+var amenplay = false;
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+ }
+
+function runTheIDM() {
     var MASTERDATA = [
         "0'33'", "137 (Rinse)", "50 Cycles", "54 Cymru Beats", "6IE.CR", "7th Dimension",
         "90101-5l-l", "90101-61-01", "A Real Woman", "Acid Blue", "Acid Tape Track",
@@ -120,3 +126,32 @@ function runTheIDM(userWord) {
          <p style='text-align: center;'>" + multiArr[3] + "</p> \
          <p style='text-align: center;'>" + multiArr[4] + "</p>";
 }
+
+async function amenSeqRun() {
+    var amenString = document.getElementById('amenseqstr').value;
+    while (amenplay) {
+        for (let x in amenString) {
+            if (amenString[x] == " ") {
+            await sleep(100);
+            continue;
+            }
+            var currSlice = document.querySelector('.amen-' + amenString[x]);
+            currSlice.classList.add('pressed');
+            var clip = new Audio("./amen/" + amenString[x] + ".wav");
+            clip.play();
+            await sleep(100);
+            currSlice.classList.remove('pressed');
+        }
+    }
+}
+
+document.getElementById('amenbutton').addEventListener('mousedown', function() {
+    if (document.getElementById('amenseqstr').value != '') {
+        amenplay = true;
+        amenSeqRun();
+    }
+});
+
+document.getElementById('amenbutton').addEventListener('mouseup', function() {
+    amenplay = false;
+});
