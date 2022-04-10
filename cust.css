@@ -30,20 +30,6 @@ hr {
     font-size: 60px;
 }
 
-/* .amenslice {
-    outline: none;
-    font-size: 12px;
-    line-height: 0;
-    font-weight: 900;
-    color: #DA0463;
-    display: inline;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    margin: 0px;
-    background-color: white;
-} */
-
 .cursivebig {
     font-family: 'Qwitcher Grypen', cursive;
     font-size: 60px;
@@ -95,7 +81,6 @@ hr {
     width: 300px;
 }
 
-/*
-font-family: 'Libre Barcode 39 Text', cursive;
-font-family: 'Palette Mosaic', cursive;
-*/
+.pressed {
+    opacity: .5;
+}
