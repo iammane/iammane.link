@@ -128,6 +128,15 @@ function runTheIDM() {
 }
 
 async function amenSeqRun() {
+    /*
+    var amenString = $('#amenseqstr').attr("value"); 
+    This is incredibly tricky. It's not updating the value because it keeps reading the default value
+    from the HTML document since it's a base value. I think in order for this to work I'd need to
+    do something like:
+
+    var amenString = $('#amenseqstr').attr("value", "$('#amenseqstr').attr('value')");
+
+    */
     var amenString = document.getElementById('amenseqstr').value;
     while (amenplay) {
         for (let x in amenString) {
@@ -186,15 +195,29 @@ function squirrelSpin() {
     }
 }
 
-document.getElementById('amenbutton').addEventListener('pointerdown', function() {
-    if (document.getElementById('amenseqstr').value != '') {
+$('#amenbutton').on('pointerdown', function() {
+    if ($('#amenseqstr').attr('value') != '') {
         amenplay = true;
         amenSeqRun();
     }
+    // if (document.getElementById('amenseqstr').value != '') {
+    //     amenplay = true;
+    //     amenSeqRun();
+    // }
 });
-
-document.getElementById('amenbutton').addEventListener('pointerup', function() {
+$('#amenbutton').on('pointerup', function() {
     amenplay = false;
 });
 
-document.getElementById('squirrelbutton').addEventListener('click', squirrelSpin);
+// document.getElementById('amenbutton').addEventListener('pointerdown', function() {
+//     if (document.getElementById('amenseqstr').value != '') {
+//         amenplay = true;
+//         amenSeqRun();
+//     }
+// });
+// document.getElementById('amenbutton').addEventListener('pointerup', function() {
+//     amenplay = false;
+// });
+
+$('.idmify').on('click', runTheIDM);
+$('#squirrelbutton').on('click', squirrelSpin);
