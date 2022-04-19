@@ -1,11 +1,11 @@
-var amenplay = false;
+let amenplay = false;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
  }
 
 function runTheIDM() {
-    var MASTERDATA = [
+    const MASTERDATA = [
         "0'33'", "137 (Rinse)", "50 Cycles", "54 Cymru Beats", "6IE.CR", "7th Dimension",
         "90101-5l-l", "90101-61-01", "A Real Woman", "Acid Blue", "Acid Tape Track",
         "Acrid Avid Jam Shred", "Acroyear2", "Actium", "Afx237 V7", "Ageispolis",
@@ -105,18 +105,18 @@ function runTheIDM() {
     ]
     
     // Need to loop five times
-    var multiArr = [];
-    var titleArr = [];
+    let multiArr = [];
+    let titleArr = [];
     for (let reps = 0; reps < 5; reps++) {
         titleArr = [];
         titleArr.push(document.getElementById('idmword').value);
-        var randIter = Math.floor((Math.random() * 10) + 1);
+        let randIter = Math.floor((Math.random() * 10) + 1);
         for (let iter = 0; iter < randIter; iter++) {
             randTitleNum = Math.floor(Math.random() * MASTERDATA.length);
             randTitle = MASTERDATA[randTitleNum];
             titleArr.push(randTitle.slice(1,2));
         }
-        var finishedTitle = titleArr.join('');
+        let finishedTitle = titleArr.join('');
         multiArr.push(finishedTitle);
     }
     document.getElementById('idmoutput').innerHTML = "<p style='text-align: center;'>Your semi random, (very) likely incomprehensible IDM names are:</p> \
@@ -137,16 +137,16 @@ async function amenSeqRun() {
     var amenString = $('#amenseqstr').attr("value", "$('#amenseqstr').attr('value')");
 
     */
-    var amenString = document.getElementById('amenseqstr').value;
+    let amenString = document.getElementById('amenseqstr').value;
     while (amenplay) {
         for (let x in amenString) {
             if (amenString[x] == " ") {
             await sleep(100);
             continue;
             }
-            var currSlice = document.querySelector('.amen-' + amenString[x]);
+            let currSlice = document.querySelector('.amen-' + amenString[x]);
             currSlice.classList.add('pressed');
-            var clip = new Audio("./amen/" + amenString[x] + ".wav");
+            let clip = new Audio("./amen/" + amenString[x] + ".wav");
             clip.play();
             await sleep(100);
             currSlice.classList.remove('pressed');
@@ -155,7 +155,7 @@ async function amenSeqRun() {
 }
 
 function squirrelSpin() {
-    var sqSpinOut = Math.floor((Math.random() * 10) +  1);
+    let sqSpinOut = Math.floor((Math.random() * 10) +  1);
     if (sqSpinOut == 1) {
         document.querySelector('.squirrout').style.background = "yellow";
         document.querySelector('.squirrout').innerHTML = "Yellow!";
