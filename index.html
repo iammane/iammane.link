@@ -123,7 +123,7 @@
           <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Root word</span>
             <input type="text" class="form-control" id="idmword" placeholder="Your word" aria-label="Your word" aria-describedby="basic-addon1">
-            <button type="button" class="btn btn-danger" onclick="runTheIDM();">IDM'ify IT!</button>
+            <button type="button" class="idmify btn btn-danger">IDM'ify IT!</button> <!-- onclick="runTheIDM();"-->
           </div>
         </div>
       </div>
@@ -183,6 +183,24 @@
     </div>
   </div>
   <!-- End AmenSEQ project -->
+  <!-- Begin Squirrel game section  -->
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <p class="text-center">Snarky Snooky Squirrel Game Spinner. This is unfinished because my son wanted to play for like five minutes and then was over it.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <p>Click the button to spin the wheel</p>
+          <button type="button" class="btn btn-dark" id="squirrelbutton">Spin!</button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <button type="button" class="squirrout">Waiting for spin</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End IDM name generator section-->
 
   <!-- Begin section site info -->
   <div class="container">
@@ -199,16 +217,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="./projects.js"></script>
   
   <footer class="bg-light text-center text-lg-start">
     <div class="text-center p-3 bg-secondary bg-opacity-50">
       <p class="footp">© 2022 Copyright: Matt Nemeth</p>
-      <p class="footp">Field photo by <a class="link-light"
-          href="https://unsplash.com/@gebhartyler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">gebhartyler</a>
-        on <a class="link-light"
-          href="https://unsplash.com/@gebhartyler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      </p>
       <p class="footp">Glitch screen photo by <a class="link-light" 
           href="https://unsplash.com/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sigmund</a>
         on <a class="link-light" 
@@ -234,6 +248,7 @@
           created by Freepik - Flaticon</a></p>
     </div>
   </footer>
+
 
 </body>
 

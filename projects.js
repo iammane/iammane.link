@@ -1,11 +1,11 @@
-var amenplay = false;
+let amenplay = false;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
  }
 
 function runTheIDM() {
-    var MASTERDATA = [
+    const MASTERDATA = [
         "0'33'", "137 (Rinse)", "50 Cycles", "54 Cymru Beats", "6IE.CR", "7th Dimension",
         "90101-5l-l", "90101-61-01", "A Real Woman", "Acid Blue", "Acid Tape Track",
         "Acrid Avid Jam Shred", "Acroyear2", "Actium", "Afx237 V7", "Ageispolis",
@@ -105,18 +105,18 @@ function runTheIDM() {
     ]
     
     // Need to loop five times
-    var multiArr = [];
-    var titleArr = [];
+    let multiArr = [];
+    let titleArr = [];
     for (let reps = 0; reps < 5; reps++) {
         titleArr = [];
         titleArr.push(document.getElementById('idmword').value);
-        var randIter = Math.floor((Math.random() * 10) + 1);
+        let randIter = Math.floor((Math.random() * 10) + 1);
         for (let iter = 0; iter < randIter; iter++) {
             randTitleNum = Math.floor(Math.random() * MASTERDATA.length);
             randTitle = MASTERDATA[randTitleNum];
             titleArr.push(randTitle.slice(1,2));
         }
-        var finishedTitle = titleArr.join('');
+        let finishedTitle = titleArr.join('');
         multiArr.push(finishedTitle);
     }
     document.getElementById('idmoutput').innerHTML = "<p style='text-align: center;'>Your semi random, (very) likely incomprehensible IDM names are:</p> \
@@ -128,16 +128,16 @@ function runTheIDM() {
 }
 
 async function amenSeqRun() {
-    var amenString = document.getElementById('amenseqstr').value;
+    let amenString = document.getElementById('amenseqstr').value;
     while (amenplay) {
         for (let x in amenString) {
             if (amenString[x] == " ") {
             await sleep(100);
             continue;
             }
-            var currSlice = document.querySelector('.amen-' + amenString[x]);
+            let currSlice = document.querySelector('.amen-' + amenString[x]);
             currSlice.classList.add('pressed');
-            var clip = new Audio("./amen/" + amenString[x] + ".wav");
+            let clip = new Audio("./amen/" + amenString[x] + ".wav");
             clip.play();
             await sleep(100);
             currSlice.classList.remove('pressed');
@@ -145,13 +145,70 @@ async function amenSeqRun() {
     }
 }
 
-document.getElementById('amenbutton').addEventListener('pointerdown', function() {
-    if (document.getElementById('amenseqstr').value != '') {
+function squirrelSpin() {
+    let sqSpinOut = Math.floor((Math.random() * 10) +  1);
+    if (sqSpinOut == 1) {
+        document.querySelector('.squirrout').style.background = "yellow";
+        document.querySelector('.squirrout').innerHTML = "Yellow!";
+    }
+    if (sqSpinOut == 2) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Wind! Lose all acorns!";
+    }if (sqSpinOut == 3) {
+        document.querySelector('.squirrout').style.background = "purple";
+        document.querySelector('.squirrout').innerHTML = "Purple!";
+    }if (sqSpinOut == 4) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Lose one acorn!";
+    }if (sqSpinOut == 5) {
+        document.querySelector('.squirrout').style.background = "red";
+        document.querySelector('.squirrout').innerHTML = "Red!";
+    }
+    if (sqSpinOut == 6) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Pick one acorn!";
+    }
+    if (sqSpinOut == 7) {
+        document.querySelector('.squirrout').style.background = "blue";
+        document.querySelector('.squirrout').innerHTML = "Blue!";
+    }
+    if (sqSpinOut == 8) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Steal one acorn!";
+    }
+    if (sqSpinOut == 9) {
+        document.querySelector('.squirrout').style.background = "green";
+        document.querySelector('.squirrout').innerHTML = "Green!";
+    }
+    if (sqSpinOut == 10) {
+        document.querySelector('.squirrout').style.background = "white";
+        document.querySelector('.squirrout').innerHTML = "Pick two acorns!";
+    }
+}
+
+$('#amenbutton').on('pointerdown', function() {
+    if ($('#amenseqstr').attr('value') != '') {
         amenplay = true;
         amenSeqRun();
     }
+    // if (document.getElementById('amenseqstr').value != '') {
+    //     amenplay = true;
+    //     amenSeqRun();
+    // }
 });
-
-document.getElementById('amenbutton').addEventListener('pointerup', function() {
+$('#amenbutton').on('pointerup', function() {
     amenplay = false;
 });
+
+// document.getElementById('amenbutton').addEventListener('pointerdown', function() {
+//     if (document.getElementById('amenseqstr').value != '') {
+//         amenplay = true;
+//         amenSeqRun();
+//     }
+// });
+// document.getElementById('amenbutton').addEventListener('pointerup', function() {
+//     amenplay = false;
+// });
+
+$('.idmify').on('click', runTheIDM);
+$('#squirrelbutton').on('click', squirrelSpin);
